@@ -1,9 +1,4 @@
-// Custom.scss
-// Option B: Include parts of Bootstrap
-
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/bootstrap/scss/functions";
-
+/* @import "~/node_modules/bootstrap/scss/functions";
 // 2. Include any default variable overrides here
 
 // 3. Include remainder of required Bootstrap stylesheets
@@ -21,15 +16,15 @@
 // 5. Add additional custom code here
 @import "colores";
 @import "estructura";
-@import "tipografia";
-
+@import "tipografia"; 
+ */
 * {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-  /* Inicio index */
+ /* Inicio index */
   /* Inicio header */
 
 header {
@@ -43,8 +38,8 @@ header {
   header div {
     width: 90%;
     margin: auto auto;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     align-items: center;
   }
   header div nav .menu-check {
@@ -57,7 +52,7 @@ header {
     display: inline-block;
   }
   header div nav .menu-check li a {
-    color: white;
+    color: black;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     font-size: 17px;
     padding: 7px 13px;
@@ -66,9 +61,8 @@ header {
     text-transform: uppercase;
   }
   header div nav .menu-check li a:hover {
-    background-color: #87bb6e;
-    text-decoration: underline;
-    text-decoration-color: white;
+    background-image: linear-gradient(to right bottom, #fd6e00, #f98600, #f49d00, #edb100, #e4c500, #e5c100, #e5be00, #e6ba00, #ef9e00, #f67e00, #fc5600, #ff0000);    text-decoration: underline;
+    text-decoration-color: black;
     transition: 0.5s;
   }
   
@@ -90,8 +84,8 @@ header {
   @media (max-width: 952px) {
     img {
       justify-items: center;
-      width: 50%;
-      height: 50%;
+      width: 30px;
+      height: 15px;
     }
   
     a {
@@ -114,7 +108,7 @@ header {
       left: -100%;
       text-align: center;
       transition: all 0.5s;
-    }
+          }
     .menu-check li {
       margin: 50px 0;
       line-height: 30px;
@@ -125,6 +119,9 @@ header {
   
     #check:checked ~ ul {
       left: 0;
+    }
+    .img__logo {
+
     }
   }
   /* Fin header index */
@@ -230,7 +227,6 @@ header {
     text-align: center;
   }
   
-  /* Fin body */
   /* Fin index */
   /* Inicio  */
   /* Inicio header */
@@ -320,11 +316,11 @@ header {
   }
   
   .grid-container {
-    width: 75%;
+    /* width: 100%; */
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(1, fr);
   }
   
   .grid-item {
@@ -689,4 +685,10 @@ header {
       width: 100%;
       height: 50%;
     }
+  }
+
+  .img__logo {
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid black;
   }
